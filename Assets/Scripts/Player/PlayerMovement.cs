@@ -2,11 +2,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Components")]
     public CharacterController controller;
-    public GameObject player;
-
-    [Header("Speed")]
-    public float speed = 12;
+    public PlayerStats stats;
+    GameObject player;
 
     [Header("Gravity")]
     public float gravity = -9.81f;
@@ -25,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        player = PlayerManager.instance.player;
+
         standingHeight = player.transform.localScale.y;
         crouchingHeight = standingHeight * 0.7f;
     }
@@ -41,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
-        controller.Move(move * speed * Time.deltaTime);
+        controller.Move(move * stats.speed * Time.deltaTime);
 
         // Jump
         if (Input.GetButtonDown("Jump") && isGrounded)

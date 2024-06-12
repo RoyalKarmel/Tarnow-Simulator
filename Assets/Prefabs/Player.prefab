@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6616225109543515369}
   - component: {fileID: 5151377970403972018}
+  - component: {fileID: 4936819032688463814}
   - component: {fileID: 6510168043712159689}
   m_Layer: 0
   m_Name: Player
@@ -62,6 +63,29 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4936819032688463814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324934946362745188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27940bf1dccd23f408b4678f09841380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  damage:
+    baseValue: 10
+  armor:
+    baseValue: 0
+  criticalHitMultiplier: 2
+  criticalChance: 0.1
+  speed: 12
+  healthBar: {fileID: 0}
+  staminaBar: {fileID: 0}
+  maxStamina: 50
 --- !u!114 &6510168043712159689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,8 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 5151377970403972018}
-  player: {fileID: 324934946362745188}
-  speed: 12
+  stats: {fileID: 4936819032688463814}
   gravity: -19.62
   jumpHeight: 3
   groundCheck: {fileID: 4832838634012221205}
