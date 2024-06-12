@@ -12,9 +12,6 @@ public class CharacterStats : MonoBehaviour
     public int criticalHitMultiplier = 2;
     public float criticalChance = 0.1f;
 
-    [Header("Speed")]
-    public float speed;
-
     void Awake()
     {
         currentHealth = maxHealth;

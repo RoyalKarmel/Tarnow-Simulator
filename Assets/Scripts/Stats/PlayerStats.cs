@@ -6,6 +6,9 @@ public class PlayerStats : CharacterStats
     public int maxStamina;
     public int currentStamina { get; private set; }
 
+    [Header("Speed")]
+    public float speed;
+
     ResourceBar healthBar;
     ResourceBar staminaBar;
 
