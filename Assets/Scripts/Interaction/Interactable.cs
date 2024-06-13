@@ -3,20 +3,28 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public float radius = 3f;
+    public new string name;
+    public bool playerInRange { get; private set; } = false;
     public Transform player { get; private set; }
 
     void Start()
     {
         player = PlayerManager.instance.player.transform;
+
+        if (string.IsNullOrEmpty(name))
+            name = gameObject.name;
     }
 
     void Update()
     {
         float distance = Vector3.Distance(transform.position, player.position);
+        playerInRange = distance <= radius;
 
-        if (distance <= radius)
+        if (playerInRange)
+        {
             if (Input.GetButtonDown("Interact"))
                 Interact();
+        }
     }
 
     public virtual void Interact()
