@@ -9,6 +9,9 @@ public class CharacterStats : MonoBehaviour
     [Header("Combat")]
     public Stat damage;
     public Stat armor;
+
+    [Header("")]
+    public float attackSpeed = 1f;
     public int criticalHitMultiplier = 2;
     public float criticalChance = 0.1f;
 

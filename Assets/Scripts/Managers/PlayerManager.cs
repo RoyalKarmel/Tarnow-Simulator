@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -22,4 +23,9 @@ public class PlayerManager : MonoBehaviour
     [Header("Player Resource Bars")]
     public ResourceBar playerHealthBar;
     public ResourceBar playerStaminaBar;
+
+    public void KillPlayer()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

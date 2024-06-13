@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6616225109543515369}
   - component: {fileID: 5151377970403972018}
   - component: {fileID: 4936819032688463814}
+  - component: {fileID: 5796268517463462911}
   - component: {fileID: 6510168043712159689}
   m_Layer: 0
   m_Name: Player
@@ -80,12 +81,28 @@ MonoBehaviour:
     baseValue: 10
   armor:
     baseValue: 0
+  attackSpeed: 1
   criticalHitMultiplier: 2
   criticalChance: 0.1
-  speed: 12
-  healthBar: {fileID: 0}
-  staminaBar: {fileID: 0}
   maxStamina: 50
+  speed: 12
+--- !u!114 &5796268517463462911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324934946362745188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d056cc4b93b9e4381434129032b801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDelay: 0.6
+  attackRange: 2.5
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &6510168043712159689
 MonoBehaviour:
   m_ObjectHideFlags: 0

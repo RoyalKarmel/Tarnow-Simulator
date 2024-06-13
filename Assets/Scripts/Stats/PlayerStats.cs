@@ -34,4 +34,10 @@ public class PlayerStats : CharacterStats
 
         healthBar.SetValue(currentHealth);
     }
+
+    public override void Die()
+    {
+        base.Die();
+        PlayerManager.instance.KillPlayer();
+    }
 }
