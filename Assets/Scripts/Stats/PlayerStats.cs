@@ -14,11 +14,28 @@ public class PlayerStats : CharacterStats
 
     void Start()
     {
+        EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
+
         healthBar = PlayerManager.instance.playerHealthBar;
         staminaBar = PlayerManager.instance.playerStaminaBar;
 
         healthBar.SetMaxValue(maxHealth);
         staminaBar.SetMaxValue(maxStamina);
+    }
+
+    void OnEquipmentChanged(Equipment newItem, Equipment oldItem)
+    {
+        if (newItem != null)
+        {
+            armor.AddModifier(newItem.armorModifier);
+            damage.AddModifier(newItem.damageModifier);
+        }
+
+        if (oldItem != null)
+        {
+            armor.RemoveModifier(newItem.armorModifier);
+            damage.RemoveModifier(newItem.damageModifier);
+        }
     }
 
     public override void Heal(int amount)
