@@ -20,6 +20,9 @@ public class Inventory : MonoBehaviour
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
 
+    public Transform itemsParent;
+
+    [Header("Inventory")]
     public int space;
     public float maxWeight = 300; // Dac jako player stat
     public List<Item> items = new List<Item>();
@@ -43,8 +46,27 @@ public class Inventory : MonoBehaviour
     public void Remove(Item item)
     {
         items.Remove(item);
+        InventoryUI.instance.itemsInUI.Remove(item);
 
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
+    }
+
+    public void DropItem(ItemButton itemButton)
+    {
+        Vector3 dropPosition = Camera.main.ScreenToWorldPoint(
+            new Vector3(
+                Input.mousePosition.x,
+                Input.mousePosition.y,
+                Camera.main.transform.position.y
+            )
+        );
+        GameObject droppedItem = Instantiate(
+            itemButton.item.prefab,
+            dropPosition,
+            Quaternion.identity
+        );
+        droppedItem.transform.SetParent(itemsParent);
+        itemButton.RemoveItem();
     }
 }

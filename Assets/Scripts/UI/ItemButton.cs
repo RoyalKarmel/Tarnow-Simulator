@@ -5,7 +5,7 @@ public class ItemButton : MonoBehaviour
 {
     public Image icon;
 
-    Item item;
+    public Item item { get; private set; }
 
     public void AddItem(Item newItem)
     {

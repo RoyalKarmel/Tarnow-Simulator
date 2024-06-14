@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: New Item
   m_EditorClassIdentifier: 
   name: New Item
-  prefab: {fileID: 6963537652001086942, guid: 2bda043a7192d9544828b91eb1d7fd9f, type: 3}
+  prefab: {fileID: 1570352995708802137, guid: 1b7a33a81df41c24d8b97b96472728de, type: 3}
   icon: {fileID: 21300000, guid: d197cc94653e4854d9018786fa820548, type: 3}
   weight: 20
