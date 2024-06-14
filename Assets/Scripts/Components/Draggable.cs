@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    // public Image image;
+    public Image image;
 
     [HideInInspector]
     public Transform parentAfterDrag;
@@ -15,7 +15,9 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         parentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
-        // image.raycastTarget = false;
+        image.raycastTarget = false;
+
+        ChangeImageAlpha();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -28,6 +30,17 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     {
         Debug.Log("End Drag");
         transform.SetParent(parentAfterDrag);
-        // image.raycastTarget = true;
+        image.raycastTarget = true;
+
+        ChangeImageAlpha();
+    }
+
+    // Change image alpha
+    void ChangeImageAlpha()
+    {
+        Color color = image.color;
+        float newAlpha = color.a == 1f ? 0.6f : 1f;
+        color.a = newAlpha;
+        image.color = color;
     }
 }
