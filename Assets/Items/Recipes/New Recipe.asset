@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd13628a5c7fd542b80a149915d5c52, type: 3}
+  m_Name: New Recipe
+  m_EditorClassIdentifier: 
+  name: Recipe for Big Health Potion
+  prefab: {fileID: 8494452300732769420, guid: 1353794c237b1ff409c87f5dc84eec0b, type: 3}
+  icon: {fileID: -840201613, guid: 5dd4801893bd15646987df5373484d05, type: 3}
+  weight: 0
+  ingredients:
+  - {fileID: 11400000, guid: 9e973330d1494dd4a8d05a181e576e78, type: 2}
+  - {fileID: 11400000, guid: 880c68d57eaafbd4b9c6b43c1831f58b, type: 2}
+  result: {fileID: 11400000, guid: a78ff74cfdee6f749af57d1ef85c04b5, type: 2}
+  maxIngredients: 4

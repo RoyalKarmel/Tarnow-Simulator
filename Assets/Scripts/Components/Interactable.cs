@@ -5,11 +5,14 @@ public class Interactable : MonoBehaviour
     public float radius = 3f;
     public new string name;
     public bool playerInRange { get; private set; } = false;
+
     public Transform player { get; private set; }
+    SelectionManager selectionManager;
 
     void Start()
     {
         player = PlayerManager.instance.player.transform;
+        selectionManager = SelectionManager.instance;
 
         if (string.IsNullOrEmpty(name))
             name = gameObject.name;
@@ -22,10 +25,7 @@ public class Interactable : MonoBehaviour
 
         if (playerInRange)
         {
-            if (
-                Input.GetButtonDown("Interact")
-                && SelectionManager.instance.selectedObject == gameObject
-            )
+            if (Input.GetButtonDown("Interact") && selectionManager.selectedObject == gameObject)
                 Interact();
         }
     }

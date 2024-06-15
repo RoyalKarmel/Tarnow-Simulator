@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -55,7 +54,10 @@ public class InventoryUI : MonoBehaviour
             inventoryUI.SetActive(!isOpen);
 
             if (isOpen)
+            {
                 Cursor.lockState = CursorLockMode.Locked;
+                CraftingUI.instance.ReturnCraftingItemsToInventory(slots);
+            }
             else
                 Cursor.lockState = CursorLockMode.None;
         }
