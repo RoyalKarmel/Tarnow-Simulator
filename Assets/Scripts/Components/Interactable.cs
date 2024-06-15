@@ -22,7 +22,10 @@ public class Interactable : MonoBehaviour
 
         if (playerInRange)
         {
-            if (Input.GetButtonDown("Interact"))
+            if (
+                Input.GetButtonDown("Interact")
+                && SelectionManager.instance.selectedObject == gameObject
+            )
                 Interact();
         }
     }
