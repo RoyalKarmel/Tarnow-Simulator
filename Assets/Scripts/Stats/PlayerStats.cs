@@ -9,11 +9,19 @@ public class PlayerStats : CharacterStats
     [Header("Speed")]
     public float speed;
 
+    [Header("Weight")]
+    public float maxWeight = 300;
+
+    [HideInInspector]
+    public float currentWeight;
+
     ResourceBar healthBar;
     ResourceBar staminaBar;
 
     void Start()
     {
+        currentStamina = maxStamina;
+
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
 
         healthBar = PlayerManager.instance.playerHealthBar;

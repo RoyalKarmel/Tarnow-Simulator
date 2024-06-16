@@ -1725,6 +1725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1297561711}
+  playerStats: {fileID: 1297561714}
   playerHealthBar: {fileID: 1557229001}
   playerStaminaBar: {fileID: 743126328}
 --- !u!4 &644314865
@@ -2026,7 +2027,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemsParent: {fileID: 374391671}
   space: 0
-  maxWeight: 300
   items: []
 --- !u!114 &801385244
 MonoBehaviour:
@@ -2858,6 +2858,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 324934946362745188, guid: 73ea7a7ff5d05074abc8143d2bc75b0f, type: 3}
   m_PrefabInstance: {fileID: 4658343387116907609}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1297561714 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4936819032688463814, guid: 73ea7a7ff5d05074abc8143d2bc75b0f, type: 3}
+  m_PrefabInstance: {fileID: 4658343387116907609}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297561711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27940bf1dccd23f408b4678f09841380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1313146936
 PrefabInstance:
   m_ObjectHideFlags: 0

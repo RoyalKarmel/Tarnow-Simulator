@@ -24,8 +24,14 @@ public class Inventory : MonoBehaviour
 
     [Header("Inventory")]
     public int space;
-    public float maxWeight = 300; // Dac jako player stat
     public List<Item> items = new List<Item>();
+
+    PlayerStats playerStats;
+
+    void Start()
+    {
+        playerStats = PlayerManager.instance.playerStats;
+    }
 
     public bool Add(Item newItem)
     {
@@ -36,6 +42,7 @@ public class Inventory : MonoBehaviour
         }
 
         items.Add(newItem);
+        playerStats.currentWeight += newItem.weight;
 
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
@@ -46,6 +53,8 @@ public class Inventory : MonoBehaviour
     public void Remove(Item item)
     {
         items.Remove(item);
+        playerStats.currentWeight -= item.weight;
+
         InventoryUI.instance.itemsInUI.Remove(item);
 
         if (onItemChangedCallback != null)

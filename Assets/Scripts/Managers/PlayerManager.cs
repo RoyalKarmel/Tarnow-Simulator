@@ -19,6 +19,7 @@ public class PlayerManager : MonoBehaviour
     #endregion
 
     public GameObject player;
+    public PlayerStats playerStats;
 
     [Header("Player Resource Bars")]
     public ResourceBar playerHealthBar;
