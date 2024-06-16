@@ -19,7 +19,8 @@ public class ItemButton : MonoBehaviour
     {
         if (item != null)
         {
-            item.Use();
+            if (!(item as Equipment))
+                item.Use();
         }
     }
 

@@ -33,8 +33,8 @@ public class PlayerStats : CharacterStats
 
         if (oldItem != null)
         {
-            armor.RemoveModifier(newItem.armorModifier);
-            damage.RemoveModifier(newItem.damageModifier);
+            armor.RemoveModifier(oldItem.armorModifier);
+            damage.RemoveModifier(oldItem.damageModifier);
         }
     }
 

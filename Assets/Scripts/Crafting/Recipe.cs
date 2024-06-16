@@ -8,9 +8,9 @@ public class Recipe : Item
     public List<Item> ingredients;
     public Item result;
 
-    [Range(2, 6)]
+    [Range(2, 9)]
     [SerializeField]
-    int maxIngredients = 6;
+    int maxIngredients = 9;
 
     void OnValidate()
     {
