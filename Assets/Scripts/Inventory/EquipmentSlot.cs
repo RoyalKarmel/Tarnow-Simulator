@@ -1,10 +1,17 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class EquipmentSlot : MonoBehaviour, IDropHandler
 {
+    public TMP_Text equipSlotText;
     public EquipSlot equipSlot;
     Equipment equipment;
+
+    void Start()
+    {
+        equipSlotText.text = equipSlot.ToString();
+    }
 
     void Update()
     {
