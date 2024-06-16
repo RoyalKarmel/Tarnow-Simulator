@@ -4,8 +4,9 @@ using UnityEngine.EventSystems;
 
 public class EquipmentSlot : MonoBehaviour, IDropHandler
 {
-    public TMP_Text equipSlotText;
     public EquipSlot equipSlot;
+    public Transform slotTransform;
+    public TMP_Text equipSlotText;
     Equipment equipment;
 
     void Start()
@@ -15,7 +16,7 @@ public class EquipmentSlot : MonoBehaviour, IDropHandler
 
     void Update()
     {
-        if (transform.childCount == 0)
+        if (slotTransform.childCount == 0)
             RemoveEquipment();
     }
 
@@ -29,14 +30,14 @@ public class EquipmentSlot : MonoBehaviour, IDropHandler
 
         if (equipment != null && equipment.equipSlot == equipSlot)
         {
-            if (transform.childCount == 0)
-                draggable.parentAfterDrag = transform;
+            if (slotTransform.childCount == 0)
+                draggable.parentAfterDrag = slotTransform;
             else
             {
                 RemoveEquipment();
-                Transform currentChild = transform.GetChild(0);
+                Transform currentChild = slotTransform.GetChild(0);
                 currentChild.SetParent(draggable.parentAfterDrag);
-                draggable.parentAfterDrag = transform;
+                draggable.parentAfterDrag = slotTransform;
             }
             equipment.Use();
         }

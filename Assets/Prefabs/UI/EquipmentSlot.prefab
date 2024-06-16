@@ -143,6 +143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 706688060248060787}
+  - component: {fileID: 5070395427897321516}
   m_Layer: 5
   m_Name: EquipmentSlot
   m_TagString: Untagged
@@ -171,6 +172,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5070395427897321516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4548756245646267020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3150fab17e0744596b3df5b34ecfca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipSlotText: {fileID: 674447253195163076}
+  equipSlot: 0
+  slotTransform: {fileID: 9170226280429082439}
 --- !u!1 &5974568929941084074
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +196,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9170226280429082439}
-  - component: {fileID: 7787035752848917299}
   - component: {fileID: 6374828243959954085}
   - component: {fileID: 3674328075655531017}
   - component: {fileID: 2328496003588569954}
@@ -210,20 +225,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7787035752848917299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5974568929941084074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad3150fab17e0744596b3df5b34ecfca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  equipSlotText: {fileID: 674447253195163076}
-  equipSlot: 0
 --- !u!114 &6374828243959954085
 MonoBehaviour:
   m_ObjectHideFlags: 0

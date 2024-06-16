@@ -18,7 +18,7 @@ public class QuickSlot : MonoBehaviour, IDropHandler
     void Update()
     {
         if (slotTransform.childCount > 0)
-            AddToItemQuickSlot();
+            AddItemToQuickSlot();
         else
             RemoveItemFromQuickSlot();
 
@@ -49,7 +49,7 @@ public class QuickSlot : MonoBehaviour, IDropHandler
 
     #region Item
     // Add item to quick slot
-    void AddToItemQuickSlot()
+    void AddItemToQuickSlot()
     {
         ItemButton itemButton = slotTransform.GetChild(0).GetComponent<ItemButton>();
         item = itemButton.item;
