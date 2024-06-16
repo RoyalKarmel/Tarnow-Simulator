@@ -84,8 +84,15 @@ MonoBehaviour:
   attackSpeed: 1
   criticalHitMultiplier: 2
   criticalChance: 0.1
-  maxStamina: 50
-  speed: 12
+  maxStamina: 100
+  staminaCost: 10
+  currentStamina: 0
+  moveSpeed: 12
+  sprintSpeed: 20
+  speed: 0
+  maxWeight: 300
+  currentWeight: 0
+  movement: {fileID: 6510168043712159689}
 --- !u!114 &5796268517463462911
 MonoBehaviour:
   m_ObjectHideFlags: 0

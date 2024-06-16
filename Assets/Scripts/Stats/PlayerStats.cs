@@ -3,10 +3,17 @@ using UnityEngine;
 public class PlayerStats : CharacterStats
 {
     [Header("Stamina")]
-    public int maxStamina;
-    public int currentStamina { get; private set; }
+    public float maxStamina;
+    public float staminaCost = 10f;
+
+    [HideInInspector]
+    public float currentStamina;
 
     [Header("Speed")]
+    public float moveSpeed;
+    public float sprintSpeed;
+
+    [HideInInspector]
     public float speed;
 
     [Header("Weight")]
@@ -15,11 +22,13 @@ public class PlayerStats : CharacterStats
     [HideInInspector]
     public float currentWeight;
 
+    // Resource bars
     ResourceBar healthBar;
-    ResourceBar staminaBar;
+    public ResourceBar staminaBar { get; private set; }
 
     void Start()
     {
+        speed = moveSpeed;
         currentStamina = maxStamina;
 
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
@@ -28,7 +37,13 @@ public class PlayerStats : CharacterStats
         staminaBar = PlayerManager.instance.playerStaminaBar;
 
         healthBar.SetMaxValue(maxHealth);
-        staminaBar.SetMaxValue(maxStamina);
+        staminaBar.SetMaxValue((int)maxStamina);
+    }
+
+    void Update()
+    {
+        if (!Input.GetButton("Sprint"))
+            RegenerateStamina();
     }
 
     void OnEquipmentChanged(Equipment newItem, Equipment oldItem)
@@ -46,6 +61,7 @@ public class PlayerStats : CharacterStats
         }
     }
 
+    #region CharacterStats methods
     public override void Heal(int amount)
     {
         base.Heal(amount);
@@ -64,5 +80,16 @@ public class PlayerStats : CharacterStats
     {
         base.Die();
         PlayerManager.instance.KillPlayer();
+    }
+    #endregion
+
+    void RegenerateStamina()
+    {
+        currentStamina += staminaCost * Time.deltaTime;
+
+        if (currentStamina > maxStamina)
+            currentStamina = maxStamina;
+
+        staminaBar.SetValue((int)currentStamina);
     }
 }
