@@ -1831,8 +1831,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2285,6 +2285,10 @@ PrefabInstance:
     - target: {fileID: 7882402806415320457, guid: 86b618f3237647048850e924d3fd2caf, type: 3}
       propertyPath: shortcut
       value: 53
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005745358986735566, guid: 86b618f3237647048850e924d3fd2caf, type: 3}
+      propertyPath: m_text
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2968,6 +2972,10 @@ PrefabInstance:
     - target: {fileID: 7882402806415320457, guid: 86b618f3237647048850e924d3fd2caf, type: 3}
       propertyPath: shortcut
       value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005745358986735566, guid: 86b618f3237647048850e924d3fd2caf, type: 3}
+      propertyPath: m_text
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3961,6 +3969,10 @@ PrefabInstance:
       propertyPath: shortcut
       value: 51
       objectReference: {fileID: 0}
+    - target: {fileID: 9005745358986735566, guid: 86b618f3237647048850e924d3fd2caf, type: 3}
+      propertyPath: m_text
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4172,6 +4184,10 @@ PrefabInstance:
     - target: {fileID: 7882402806415320457, guid: 86b618f3237647048850e924d3fd2caf, type: 3}
       propertyPath: shortcut
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005745358986735566, guid: 86b618f3237647048850e924d3fd2caf, type: 3}
+      propertyPath: m_text
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5271,7 +5287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8494452300732769420, guid: 1353794c237b1ff409c87f5dc84eec0b, type: 3}
       propertyPath: m_Name
-      value: Big Health Potion
+      value: Jagermeister
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5328,7 +5344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1565347730938069235, guid: 31f4ea33ec1a26a4cb9c9a077ab4076e, type: 3}
       propertyPath: m_Name
-      value: Health Potion
+      value: "\u017Bubr\xF3wka"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5462,7 +5478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836279876218391067, guid: ca2226bf1e1c0af4a8c61cc0527e0647, type: 3}
       propertyPath: m_Name
-      value: Small Health Potion
+      value: "Per\u0142a Export"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5484,7 +5500,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1617162331163764544, guid: adbb34e0cb42be249b071694e35efe5a, type: 3}
       propertyPath: m_Name
-      value: Deity Pickaxe
+      value: Boski Kilof
       objectReference: {fileID: 0}
     - target: {fileID: 8200479652838927547, guid: adbb34e0cb42be249b071694e35efe5a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6087,5 +6103,5 @@ SceneRoots:
   - {fileID: 132299436}
   - {fileID: 4658343387116907609}
   - {fileID: 2086375395948131378}
-  - {fileID: 551632802}
   - {fileID: 374391671}
+  - {fileID: 551632802}

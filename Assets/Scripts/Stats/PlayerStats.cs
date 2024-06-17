@@ -12,6 +12,7 @@ public class PlayerStats : CharacterStats
     [Header("Speed")]
     public float moveSpeed;
     public float sprintSpeed;
+    float overweightSpeed;
 
     [HideInInspector]
     public float speed;
@@ -21,6 +22,7 @@ public class PlayerStats : CharacterStats
 
     [HideInInspector]
     public float currentWeight;
+    public bool isOverWeight { get; private set; }
 
     // Resource bars
     ResourceBar healthBar;
@@ -29,6 +31,7 @@ public class PlayerStats : CharacterStats
     void Start()
     {
         speed = moveSpeed;
+        overweightSpeed = moveSpeed / 2;
         currentStamina = maxStamina;
 
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
@@ -42,6 +45,13 @@ public class PlayerStats : CharacterStats
 
     void Update()
     {
+        isOverWeight = currentWeight > maxWeight;
+
+        if (isOverWeight)
+            speed = overweightSpeed;
+        else
+            speed = moveSpeed;
+
         if (!Input.GetButton("Sprint"))
             RegenerateStamina();
     }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4217148085912202493}
   - component: {fileID: 1072777774491890735}
   m_Layer: 0
-  m_Name: Small Health Potion
+  m_Name: "Per\u0142a Export"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

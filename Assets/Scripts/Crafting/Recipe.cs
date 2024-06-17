@@ -24,7 +24,7 @@ public class Recipe : Item
 
         if (result != null)
         {
-            this.name = "Recipe for " + result.name;
+            this.name = "Przepis na " + result.name;
             this.prefab = result.prefab;
             this.icon = result.icon;
             this.weight = 0;

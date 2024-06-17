@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f44ba33d4560294da1a408a96f69050, type: 3}
-  m_Name: Big Health Potion
+  m_Name: "\u017Bubr\xF3wka"
   m_EditorClassIdentifier: 
-  name: Big Health Potion
-  prefab: {fileID: 8494452300732769420, guid: 1353794c237b1ff409c87f5dc84eec0b, type: 3}
-  icon: {fileID: -840201613, guid: 5dd4801893bd15646987df5373484d05, type: 3}
+  name: "\u017Bubr\xF3wka"
+  prefab: {fileID: 1565347730938069235, guid: 31f4ea33ec1a26a4cb9c9a077ab4076e, type: 3}
+  icon: {fileID: -705410563, guid: 5dd4801893bd15646987df5373484d05, type: 3}
   weight: 20

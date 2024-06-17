@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         HandleGravity();
 
         // Sprint
-        if (Input.GetButton("Sprint") && stats.currentStamina > 0)
+        if (Input.GetButton("Sprint") && stats.currentStamina > 0 && !stats.isOverWeight)
             Sprint();
         else
             StopSprinting();
