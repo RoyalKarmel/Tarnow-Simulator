@@ -20,4 +20,5 @@ public class GameAssets : MonoBehaviour
     #endregion
 
     public GameObject itemButtonPrefab;
+    public GameObject recipeBarPrefab;
 }

@@ -2,15 +2,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Recipe", menuName = "Crafting/Recipe")]
-public class Recipe : Item
+public class Recipe : ScriptableObject
 {
+    public new string name = "New Recipe";
+
     [Header("Recipe")]
     public List<Item> ingredients;
     public Item result;
 
     [Range(2, 9)]
-    [SerializeField]
-    int maxIngredients = 9;
+    public int maxIngredients = 9;
 
     void OnValidate()
     {
@@ -23,19 +24,6 @@ public class Recipe : Item
         }
 
         if (result != null)
-        {
-            this.name = "Przepis na " + result.name;
-            this.prefab = result.prefab;
-            this.icon = result.icon;
-            this.weight = 0;
-        }
-    }
-
-    public override void Use()
-    {
-        base.Use();
-
-        CraftingManager.instance.knownRecipes.Add(this);
-        RemoveFromInventory();
+            name = "Przepis na " + result.name;
     }
 }
