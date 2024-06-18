@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 053474cadb921174c81e188d638f5123, type: 3}
-  m_Name: Deity Pickaxe
+  m_Name: Boski Kilof
   m_EditorClassIdentifier: 
   name: Boski Kilof
   prefab: {fileID: 1617162331163764544, guid: adbb34e0cb42be249b071694e35efe5a, type: 3}

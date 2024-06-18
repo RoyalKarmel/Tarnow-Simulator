@@ -11,7 +11,8 @@ public class Recipe : ScriptableObject
     public Item result;
 
     [Range(2, 9)]
-    public int maxIngredients = 9;
+    [SerializeField]
+    int maxIngredients = 9;
 
     void OnValidate()
     {

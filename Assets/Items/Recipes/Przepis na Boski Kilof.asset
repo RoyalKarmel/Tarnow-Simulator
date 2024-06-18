@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd13628a5c7fd542b80a149915d5c52, type: 3}
+  m_Name: Przepis na Boski Kilof
+  m_EditorClassIdentifier: 
+  name: Przepis na Boski Kilof
+  ingredients:
+  - {fileID: 11400000, guid: ea30f363e7d57e342aa7987961dbe274, type: 2}
+  - {fileID: 11400000, guid: de66d196d3ae89241971c6531d8ca1cc, type: 2}
+  - {fileID: 11400000, guid: 86cb827c589e86f4ca4701909b3244a1, type: 2}
+  - {fileID: 11400000, guid: 86cb827c589e86f4ca4701909b3244a1, type: 2}
+  result: {fileID: 11400000, guid: 4322bd5977508f14082e23027b690a73, type: 2}
+  maxIngredients: 4

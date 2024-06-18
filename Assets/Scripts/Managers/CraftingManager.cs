@@ -21,7 +21,6 @@ public class CraftingManager : MonoBehaviour
     #endregion
 
     public List<Recipe> recipes = new List<Recipe>();
-    public List<Recipe> knownRecipes = new List<Recipe>();
 
     public void Craft(Item craftedItem, List<InventorySlot> craftingSlots, Inventory inventory)
     {
