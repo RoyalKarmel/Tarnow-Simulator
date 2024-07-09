@@ -15,4 +15,6 @@ MonoBehaviour:
   name: "Per\u0142a Export"
   prefab: {fileID: 7836279876218391067, guid: ca2226bf1e1c0af4a8c61cc0527e0647, type: 3}
   icon: {fileID: 635021198, guid: 5dd4801893bd15646987df5373484d05, type: 3}
+  isStackable: 1
   weight: 20
+  amount: 1

@@ -23,18 +23,27 @@ public class Inventory : MonoBehaviour
     public Transform itemsParent;
 
     [Header("Inventory")]
+    public float maxWeight = 300;
+    public float currentWeight { get; private set; }
     public int space;
     public List<Item> items = new List<Item>();
 
-    PlayerStats playerStats;
-
-    void Start()
-    {
-        playerStats = PlayerManager.instance.playerStats;
-    }
-
     public bool Add(Item newItem)
     {
+        if (newItem.isStackable)
+        {
+            Item existingItem = items.Find(item => item.name == newItem.name);
+            if (existingItem != null)
+            {
+                existingItem.amount += newItem.amount;
+
+                if (onItemChangedCallback != null)
+                    onItemChangedCallback.Invoke();
+
+                return true;
+            }
+        }
+
         if (items.Count >= space)
         {
             Debug.Log("Not enought space!");
@@ -42,7 +51,7 @@ public class Inventory : MonoBehaviour
         }
 
         items.Add(newItem);
-        playerStats.currentWeight += newItem.weight;
+        currentWeight += newItem.weight;
 
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
@@ -53,7 +62,7 @@ public class Inventory : MonoBehaviour
     public void Remove(Item item)
     {
         items.Remove(item);
-        playerStats.currentWeight -= item.weight;
+        currentWeight -= item.weight;
 
         InventoryUI.instance.itemsInUI.Remove(item);
 

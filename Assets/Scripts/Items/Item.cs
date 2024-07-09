@@ -6,7 +6,9 @@ public class Item : ScriptableObject
     public new string name = "New Item";
     public GameObject prefab = null;
     public Sprite icon = null;
+    public bool isStackable = false;
     public float weight = 20;
+    public int amount = 1;
 
     public virtual void Use()
     {

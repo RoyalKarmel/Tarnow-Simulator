@@ -15,4 +15,6 @@ MonoBehaviour:
   name: Kamyczek
   prefab: {fileID: 9182398752882802268, guid: 6cbf38e323922f041b1762b389aca46e, type: 3}
   icon: {fileID: 21300000, guid: 49c4e2694c16daa4baf9368c6bca3386, type: 3}
+  isStackable: 1
   weight: 0.5
+  amount: 1

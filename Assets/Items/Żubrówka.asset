@@ -15,4 +15,6 @@ MonoBehaviour:
   name: "\u017Bubr\xF3wka"
   prefab: {fileID: 1565347730938069235, guid: 31f4ea33ec1a26a4cb9c9a077ab4076e, type: 3}
   icon: {fileID: -705410563, guid: 5dd4801893bd15646987df5373484d05, type: 3}
+  isStackable: 1
   weight: 20
+  amount: 1

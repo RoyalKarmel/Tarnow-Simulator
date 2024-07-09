@@ -15,4 +15,6 @@ MonoBehaviour:
   name: Lina
   prefab: {fileID: 3899915424676113462, guid: f71604ac65b019a45bc5bb3177b7890d, type: 3}
   icon: {fileID: 21300000, guid: 265ee98f6bec6794fa0a772b543fb62f, type: 3}
+  isStackable: 1
   weight: 3
+  amount: 1

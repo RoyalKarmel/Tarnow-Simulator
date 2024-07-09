@@ -15,4 +15,6 @@ MonoBehaviour:
   name: Patyczek
   prefab: {fileID: 6604191661036978162, guid: baa9ab34642aa4e4e8ffa6bad7ec0f9e, type: 3}
   icon: {fileID: 21300000, guid: 85481ce6751e223428ad4f17a5434fed, type: 3}
+  isStackable: 1
   weight: 1
+  amount: 1

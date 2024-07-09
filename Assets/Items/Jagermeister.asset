@@ -15,4 +15,6 @@ MonoBehaviour:
   name: Jagermeister
   prefab: {fileID: 8494452300732769420, guid: 1353794c237b1ff409c87f5dc84eec0b, type: 3}
   icon: {fileID: -840201613, guid: 5dd4801893bd15646987df5373484d05, type: 3}
+  isStackable: 1
   weight: 20
+  amount: 1

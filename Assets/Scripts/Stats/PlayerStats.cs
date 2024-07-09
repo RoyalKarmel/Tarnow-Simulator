@@ -17,11 +17,6 @@ public class PlayerStats : CharacterStats
     [HideInInspector]
     public float speed;
 
-    [Header("Weight")]
-    public float maxWeight = 300;
-
-    [HideInInspector]
-    public float currentWeight;
     public bool isOverWeight { get; private set; }
 
     // Resource bars
@@ -45,7 +40,7 @@ public class PlayerStats : CharacterStats
 
     void Update()
     {
-        isOverWeight = currentWeight > maxWeight;
+        isOverWeight = Inventory.instance.currentWeight > Inventory.instance.maxWeight;
 
         if (isOverWeight)
             speed = overweightSpeed;

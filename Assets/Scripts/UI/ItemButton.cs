@@ -1,9 +1,11 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ItemButton : MonoBehaviour
 {
     public Image icon;
+    public TMP_Text amountText;
 
     public Item item { get; private set; }
 
@@ -13,6 +15,14 @@ public class ItemButton : MonoBehaviour
 
         icon.sprite = item.icon;
         icon.enabled = true;
+
+        if (item.isStackable)
+        {
+            amountText.gameObject.SetActive(true);
+            amountText.text = item.amount.ToString();
+        }
+        else
+            amountText.gameObject.SetActive(false);
     }
 
     public void UseItem()
